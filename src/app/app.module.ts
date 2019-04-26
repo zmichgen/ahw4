@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { MainComponent } from './components/main/main.component';
 import { ItemComponent } from './components/item/item.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APIInterceptor } from './interceptors/api.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: APIInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

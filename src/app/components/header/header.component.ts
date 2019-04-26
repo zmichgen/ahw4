@@ -7,7 +7,7 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  value: string = '';
   constructor() { }
 
   ngOnInit() {

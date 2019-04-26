@@ -2,7 +2,10 @@
   <a target="blank" href="https://www.youtube.com/watch?v={{data.id.videoId}}">
     <img src="{{data.snippet.thumbnails.medium.url}}" alt="" />
   </a>
+  <hr />
   <p>{{ data.snippet.title }}</p>
+  <hr />
   <p>{{ data.snippet.publishedAt | date }}</p>
+  <hr />
   <button mat-button>More...</button>
 </div>

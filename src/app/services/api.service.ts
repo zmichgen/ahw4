@@ -11,7 +11,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   api(): Observable<any> {
-    return this.http.get<any>('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCWu3uDcix-b11amXagJRpbUyQt1BSoVxc&type=video&part=snippet&maxResults=50');
+    return this.http.get<any>('&type=video&part=snippet&maxResults=50');
   }
 
 

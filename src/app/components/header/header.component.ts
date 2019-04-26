@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  value: string = '';
+  searchString: string;
   constructor() { }
 
   ngOnInit() {

@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
+
 import { ItemComponent } from './components/item/item.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +17,7 @@ import { APIInterceptor } from './interceptors/api.interceptor';
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent,
+
     ItemComponent,
     ItemsListComponent,
   ],
@@ -25,7 +26,8 @@ import { APIInterceptor } from './interceptors/api.interceptor';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [
     {

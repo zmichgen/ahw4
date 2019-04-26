@@ -10,10 +10,8 @@ export class ApiService {
   data = null;
   constructor(private http: HttpClient) { }
 
-  api(): Observable<any> {
-    return this.http.get<any>('&type=video&part=snippet&maxResults=50');
+  api(searchString?: string): Observable<any> {
+    const whatSearch = searchString || '';
+    return this.http.get<any>(`&type=video&part=snippet&maxResults=50&q=${whatSearch}`);
   }
-
-
-
 }

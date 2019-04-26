@@ -13,9 +13,14 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.getData();
     console.log(this.data);
+
   }
 
-  getData() {
-    this.data = this.apiService.getData();
+  getData(): void {
+    this.apiService.api().subscribe(arg => {
+      this.data = arg.items;
+      console.log(this.data);
+    });
   }
+
 }

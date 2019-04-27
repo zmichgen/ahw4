@@ -1,0 +1,19 @@
+<div class='item-info'>
+  <img src="{{data.snippet.thumbnails.medium.url}}" alt='' />
+  <div class='stat'>
+    <p><span>Views: </span>{{stat.viewCount}}</p>
+    <p><span>Likes: </span>{{stat.likeCount}}</p>
+    <p><span>Dislikes: </span> {{stat.dislikeCount}}</p>
+  </div>
+  <div class='info'>
+    <h3>{{data.snippet.title }}</h3>
+    <hr />
+    <p>{{data.snippet.description}}</p>
+    <hr />
+    <p>{{data.snippet.publishedAt | date}}</p>
+
+  </div>
+
+
+  <button (click)="navigateHome()">Home</button>
+</div>

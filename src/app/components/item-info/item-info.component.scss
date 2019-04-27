@@ -1,0 +1,36 @@
+.item-info {
+  max-width: 900px;
+  margin: 10px auto;
+  padding: 10px;
+  box-shadow: 3px 3px 15px black;
+  display: flex;
+  flex-direction: column;
+  background: gray;
+  img {
+    max-width: 640px;
+    height: 440px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    margin: 0 auto;
+  }
+  .stat {
+    margin-top: 5px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(241, 210, 107, 0.5);
+    span {
+      font-weight: bold;
+    }
+  }
+  .info {
+    h3 {
+      padding: 10px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}

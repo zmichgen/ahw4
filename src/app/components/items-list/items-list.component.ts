@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-items-list',
@@ -10,7 +11,7 @@ export class ItemsListComponent implements OnInit {
   search: string = null;
   data: any[];
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private router: Router) {
     this.getData(this.apiService.search);
   }
 
@@ -24,8 +25,11 @@ export class ItemsListComponent implements OnInit {
   getData(search?: string): void {
     this.apiService.api(search).subscribe(arg => {
       this.data = arg.items;
-      console.log(arg);
     });
+  }
+
+  navigateToItem() {
+    this.router.navigate(['item']);
   }
 
 }

@@ -12,6 +12,7 @@ import { ItemComponent } from './components/item/item.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APIInterceptor } from './interceptors/api.interceptor';
+import { OutlineDirective } from './directives/outline.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { APIInterceptor } from './interceptors/api.interceptor';
 
     ItemComponent,
     ItemsListComponent,
+    OutlineDirective,
   ],
   imports: [
     BrowserModule,

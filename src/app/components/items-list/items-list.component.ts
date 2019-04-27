@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { Subject, Subscription, of } from 'rxjs';
-import { debounceTime, filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
@@ -25,6 +24,7 @@ export class ItemsListComponent implements OnInit {
   getData(search?: string): void {
     this.apiService.api(search).subscribe(arg => {
       this.data = arg.items;
+      console.log(arg);
     });
   }
 

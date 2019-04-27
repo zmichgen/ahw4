@@ -1,4 +1,4 @@
-<div class="item">
+<div appOutline [date]="data.snippet.publishedAt | date : 'yyyy'" class="item">
   <a target="blank" href="https://www.youtube.com/watch?v={{data.id.videoId}}">
     <img src="{{data.snippet.thumbnails.medium.url}}" alt="" />
   </a>
@@ -7,5 +7,5 @@
   <hr />
   <p>{{ data.snippet.publishedAt | date }}</p>
   <hr />
-  <button mat-button>More...</button>
+  <button mat-button (click)="onClick()">More...</button>
 </div>

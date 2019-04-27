@@ -8,7 +8,7 @@ import { EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  search: string = '';
+  search = '';
   data = null;
   change: EventEmitter<string> = new EventEmitter();
   constructor(private http: HttpClient) { }
@@ -22,5 +22,9 @@ export class ApiService {
     this.search = str;
     this.change.emit(this.search);
 
+  }
+
+  itemInfo(id: string) {
+    return this.http.get<any>(`&part=statistics&id=${id}`);
   }
 }

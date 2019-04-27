@@ -5,7 +5,8 @@
       Youtube client by Angular
     </h1>
 
-    <input matInput placeholder="What do you want to find?" (value)="searchString" />
+    <input matInput placeholder="What do you want to find?" [(ngModel)]="search" name="search"
+      (ngModelChange)="change()" />
 
 
   </div>

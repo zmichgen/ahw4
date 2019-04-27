@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,15 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  searchString: string;
-  constructor() { }
+  search: string;
+  data = 'data';
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+  }
+
+  change() {
+    this.api.doChange(this.search);
   }
 
 }

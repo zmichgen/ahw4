@@ -1,5 +1,5 @@
 .item-info {
-  max-width: 900px;
+  max-width: 660px;
   margin: 10px auto;
   padding: 10px;
   box-shadow: 3px 3px 15px black;
@@ -12,6 +12,14 @@
     margin-bottom: 10px;
     border-radius: 10%;
     margin: 0 auto;
+    transition-duration: 300ms;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      box-shadow: 2px 5px 7px gray;
+    }
+    &:active {
+      transform: scale(1, 1);
+    }
   }
   .stat {
     margin-top: 5px;
